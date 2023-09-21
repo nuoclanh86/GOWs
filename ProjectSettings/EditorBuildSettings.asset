@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/RPGMonsterWave02PBR/Scenes/_MainMenu.unity
     guid: 2af7906c3a6bdbe4582a1457ae3ea0e9
   - enabled: 1
-    path: Assets/RPGMonsterWave02PBR/Scenes/_MainGame.unity
+    path: Assets/RPGMonsterWave02PBR/Scenes/_Level01.unity
     guid: 84ba76ef882da104fbcf6c07a762ec75
   m_configObjects: {}
