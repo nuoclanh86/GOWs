@@ -9,7 +9,7 @@ class EditorScrips : EditorWindow
     [System.Obsolete]
     public static void RunMainScene()
     {
-        EditorApplication.OpenScene("Assets/RPGMonsterWave02PBR/Scenes/_MainMenu.unity");
+        EditorApplication.OpenScene("Assets/_MainGame/Scenes/_MainMenu.unity");
         EditorApplication.isPlaying = true;
     }
 }
