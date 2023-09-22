@@ -13,7 +13,8 @@ public class LoadingScene : MonoBehaviour
     void Start()
     {
         mainMenu.SetActive(true);
-        loadingScene.SetActive(true);
+        loadingScene.SetActive(false);
+        loadingBarFill.fillAmount = 0.0f;
     }
 
     public void LoadScene(MAPSCENE scene)
