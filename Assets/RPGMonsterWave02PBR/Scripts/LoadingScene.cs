@@ -4,15 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class ScenesManager : MonoBehaviour
+public class LoadingScene : MonoBehaviour
 {
+    public GameObject mainMenu;
     public GameObject loadingScene;
     public Image loadingBarFill;
 
-    public static ScenesManager Instance;
-    private void Awake()
+    void Start()
     {
-        Instance = this;
+        mainMenu.SetActive(true);
+        loadingScene.SetActive(true);
+    }
+
+    public void LoadScene(MAPSCENE scene)
+    {
+        StartCoroutine(LoadSceneAsync(scene));
     }
 
     IEnumerator LoadSceneAsync(MAPSCENE scene)
@@ -25,11 +31,6 @@ public class ScenesManager : MonoBehaviour
             loadingBarFill.fillAmount = progressValue;
             yield return null;
         }
-    }
-
-    public void LoadScene(MAPSCENE scene)
-    {
-        StartCoroutine(LoadSceneAsync(scene));
     }
 
     public void LoadNewGame()
