@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652478241269473020}
   - component: {fileID: 840139858779002552}
+  - component: {fileID: 3133522324404275756}
   m_Layer: 0
   m_Name: ActionPhaseManager
   m_TagString: Untagged
@@ -44,3 +45,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54074f284560b0e4d826ac7ee82bff0e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainCharacterPrefab: {fileID: 7636659018003081, guid: a40032926882cb44d8cc0c2a868813af, type: 3}
+  mainPlayerManager: {fileID: 3133522324404275756}
+--- !u!114 &3133522324404275756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7593639143868833889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44af61d2b9e900a4d835a7cdd84ef1ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Character: {fileID: 0}
+  CharacterCamera: {fileID: 0}

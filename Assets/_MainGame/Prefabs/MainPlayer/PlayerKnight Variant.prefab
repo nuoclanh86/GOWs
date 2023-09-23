@@ -64,7 +64,7 @@ PrefabInstance:
       addedObject: {fileID: 1233602176332450459}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6573516888222018887}
+      addedObject: {fileID: 5996995018991659537}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4858997596762378101}
@@ -125,7 +125,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &6573516888222018887
+--- !u!114 &5996995018991659537
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7636659018003081}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76020eee813ed7844bcea94c5d5ce76a, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e9abc6a432cb6e44a9d7c907c77f59a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Motor: {fileID: 7117284730185207498}
@@ -142,7 +142,7 @@ MonoBehaviour:
   StableMovementSharpness: 15
   OrientationSharpness: 20
   OrientationMethod: 1
-  MaxAirMoveSpeed: 10
+  MaxAirMoveSpeed: 15
   AirAccelerationSpeed: 30
   Drag: 0
   AllowJumpingWhenSliding: 1
@@ -150,9 +150,7 @@ MonoBehaviour:
   JumpScalableForwardSpeed: 0
   JumpPreGroundingGraceTime: 0.1
   JumpPostGroundingGraceTime: 0.1
-  IgnoredColliders:
-  - {fileID: 0}
-  - {fileID: 0}
+  IgnoredColliders: []
   BonusOrientationMethod: 1
   BonusOrientationSharpness: 20
   Gravity: {x: 0, y: -30, z: 0}

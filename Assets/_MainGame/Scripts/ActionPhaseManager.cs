@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using KinematicCharacterController.GOWs;
 using UnityEngine;
 
 public class ActionPhaseManager : MonoBehaviour
 {
     [SerializeField] GameObject mainCharacterPrefab;
-    public GameObject mainCharacter;
+    GameObject mainCharacter;
+
+    [SerializeField] MainPlayerManager mainPlayerManager;
 
     private static ActionPhaseManager _instance;
 
@@ -28,7 +31,7 @@ public class ActionPhaseManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        mainCharacter = Instantiate(mainCharacterPrefab, Vector3.zero, Quaternion.identity);
     }
 
     // Update is called once per frame
