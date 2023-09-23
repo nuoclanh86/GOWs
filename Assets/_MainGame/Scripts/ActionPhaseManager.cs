@@ -6,9 +6,10 @@ using UnityEngine;
 public class ActionPhaseManager : MonoBehaviour
 {
     [SerializeField] GameObject mainCharacterPrefab;
-    GameObject mainCharacter;
-
-    [SerializeField] MainPlayerManager mainPlayerManager;
+    public PlayerCamera playerCamera;
+    public Transform spawnPoint;
+    GameObject mainPlayer;
+    PlayerController mainPlayerController;
 
     private static ActionPhaseManager _instance;
 
@@ -31,7 +32,13 @@ public class ActionPhaseManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        mainCharacter = Instantiate(mainCharacterPrefab, Vector3.zero, Quaternion.identity);
+        mainPlayer = Instantiate(mainCharacterPrefab, spawnPoint.position, spawnPoint.rotation);
+
+        mainPlayerController = mainPlayer.GetComponent<PlayerController>();
+        playerCamera.SetFollowTransform(mainPlayerController.CameraFollowPoint);
+        // Ignore the character's collider(s) for camera obstruction checks
+        playerCamera.IgnoredColliders.Clear();
+        playerCamera.IgnoredColliders.AddRange(mainPlayer.GetComponentsInChildren<Collider>());
     }
 
     // Update is called once per frame
