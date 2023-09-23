@@ -81,32 +81,36 @@ namespace KinematicCharacterController.GOWs
             _currentFollowPosition = FollowTransform.position;
         }
 
-        public void UpdateWithInput(float deltaTime, float zoomInput, Vector3 rotationInput)
+        public void UpdateWithInput(float deltaTime, float zoomInput, Vector3 rotationInput, bool lockRotationCamera = false)
         {
             if (FollowTransform)
             {
-                if (InvertX)
+                Quaternion targetRotation = this.transform.rotation;
+                if (!lockRotationCamera)
                 {
-                    rotationInput.x *= -1f;
+                    if (InvertX)
+                    {
+                        rotationInput.x *= -1f;
+                    }
+                    if (InvertY)
+                    {
+                        rotationInput.y *= -1f;
+                    }
+
+                    // Process rotation input
+                    Quaternion rotationFromInput = Quaternion.Euler(FollowTransform.up * (rotationInput.x * RotationSpeed));
+                    PlanarDirection = rotationFromInput * PlanarDirection;
+                    PlanarDirection = Vector3.Cross(FollowTransform.up, Vector3.Cross(PlanarDirection, FollowTransform.up));
+                    Quaternion planarRot = Quaternion.LookRotation(PlanarDirection, FollowTransform.up);
+
+                    _targetVerticalAngle -= (rotationInput.y * RotationSpeed);
+                    _targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
+                    Quaternion verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
+                    targetRotation = Quaternion.Slerp(Transform.rotation, planarRot * verticalRot, 1f - Mathf.Exp(-RotationSharpness * deltaTime));
+
+                    // Apply rotation
+                    Transform.rotation = targetRotation;
                 }
-                if (InvertY)
-                {
-                    rotationInput.y *= -1f;
-                }
-
-                // Process rotation input
-                Quaternion rotationFromInput = Quaternion.Euler(FollowTransform.up * (rotationInput.x * RotationSpeed));
-                PlanarDirection = rotationFromInput * PlanarDirection;
-                PlanarDirection = Vector3.Cross(FollowTransform.up, Vector3.Cross(PlanarDirection, FollowTransform.up));
-                Quaternion planarRot = Quaternion.LookRotation(PlanarDirection, FollowTransform.up);
-
-                _targetVerticalAngle -= (rotationInput.y * RotationSpeed);
-                _targetVerticalAngle = Mathf.Clamp(_targetVerticalAngle, MinVerticalAngle, MaxVerticalAngle);
-                Quaternion verticalRot = Quaternion.Euler(_targetVerticalAngle, 0, 0);
-                Quaternion targetRotation = Quaternion.Slerp(Transform.rotation, planarRot * verticalRot, 1f - Mathf.Exp(-RotationSharpness * deltaTime));
-
-                // Apply rotation
-                Transform.rotation = targetRotation;
 
                 // Process distance input
                 if (_distanceIsObstructed && Mathf.Abs(zoomInput) > 0f)
