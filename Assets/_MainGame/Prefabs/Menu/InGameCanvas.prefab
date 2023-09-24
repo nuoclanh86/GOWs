@@ -1221,7 +1221,7 @@ MonoBehaviour:
   inGameUI: {fileID: 2445159342437616590}
   inGameMenu: {fileID: 4011132554529563641}
   monsterKilled: {fileID: 5951164862616571348}
-  hpFill: {fileID: 6439018646335059962}
+  hpFill: {fileID: 7864841631303701344}
 --- !u!1001 &2977923954224501445
 PrefabInstance:
   m_ObjectHideFlags: 0

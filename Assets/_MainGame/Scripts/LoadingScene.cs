@@ -8,13 +8,13 @@ public class LoadingScene : MonoBehaviour
 {
     public GameObject mainMenu;
     public GameObject loadingScene;
-    public Image loadingBarFill;
+    public Slider loadingBarFill;
 
     void Start()
     {
         mainMenu.SetActive(true);
         loadingScene.SetActive(false);
-        loadingBarFill.fillAmount = 0.0f;
+        loadingBarFill.value = 0.0f;
     }
 
     public void LoadScene(MAPSCENE scene)
@@ -29,7 +29,7 @@ public class LoadingScene : MonoBehaviour
         while (!operation.isDone)
         {
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-            loadingBarFill.fillAmount = progressValue;
+            loadingBarFill.value = progressValue;
             yield return null;
         }
     }
