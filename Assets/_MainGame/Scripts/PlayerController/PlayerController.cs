@@ -1,4 +1,4 @@
-﻿    using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using KinematicCharacterController;
@@ -89,6 +89,9 @@ namespace KinematicCharacterController.GOWs
         private Vector3 lastInnerNormal = Vector3.zero;
         private Vector3 lastOuterNormal = Vector3.zero;
 
+        Animator playerAnimator;
+        const string SpeedAnimatorParam = "Speed";
+
         private void Awake()
         {
             // Handle initial state
@@ -96,6 +99,8 @@ namespace KinematicCharacterController.GOWs
 
             // Assign the characterController to the motor
             Motor.CharacterController = this;
+
+            playerAnimator = this.GetComponent<Animator>();
         }
 
         /// <summary>
@@ -386,6 +391,8 @@ namespace KinematicCharacterController.GOWs
                         break;
                     }
             }
+            // Debug.Log("currentVelocity : " + currentVelocity.magnitude);
+            playerAnimator.SetFloat(SpeedAnimatorParam, currentVelocity.magnitude);
         }
 
         /// <summary>
