@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class ActionPhaseManager : MonoBehaviour
 {
+    [SerializeField] InGameUIController inGameUIController;
     [SerializeField] GameObject mainCharacterPrefab;
     public PlayerCamera playerCamera;
     Vector3 defaultRotateCamera;
