@@ -12,7 +12,7 @@ public class InGameUIController : MonoBehaviour
     public TextMeshProUGUI monsterKilled;
     const string monsterKilledText = "Killed : ";
     int amountMonsterKilled = 0;
-    public Image hpFill;
+    public Slider hpFill;
 
     // Start is called before the first frame update
     void Start()
@@ -20,13 +20,13 @@ public class InGameUIController : MonoBehaviour
         ShowInGameUI(true);
         amountMonsterKilled = 0;
         monsterKilled.text = monsterKilledText + amountMonsterKilled;
-        hpFill.fillAmount = 0.2f;
+        hpFill.value = 1.0f;
     }
 
     // Update is called once per frame
     void Update()
     {
-        hpFill.fillAmount = Mathf.Clamp01(0.5f / 0.9f);
+
     }
 
     public void ShowInGameUI(bool val)
