@@ -124,4 +124,9 @@ public class ActionPhaseManager : MonoBehaviour
         // Apply inputs to character
         mainPlayerController.SetInputs(ref characterInputs);
     }
+
+    public void UpdateHPMainPlayerBar(float val)
+    {
+        inGameUIController.hpFill.value = val;
+    }
 }
