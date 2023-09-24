@@ -1744,6 +1744,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1802286859466067829}
   - component: {fileID: 1802286859456520337}
+  - component: {fileID: 3363578712092673648}
   m_Layer: 6
   m_Name: BlackKnightPBRDefault
   m_TagString: Monster
@@ -1789,6 +1790,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3363578712092673648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802286859466036053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5
 --- !u!1 &1802286859466036055
 GameObject:
   m_ObjectHideFlags: 0

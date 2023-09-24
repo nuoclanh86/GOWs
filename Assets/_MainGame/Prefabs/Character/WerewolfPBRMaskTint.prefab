@@ -2028,6 +2028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7379252335875354934}
   - component: {fileID: 7379252335866060610}
+  - component: {fileID: 7055822323132822747}
   m_Layer: 6
   m_Name: WerewolfPBRMaskTint
   m_TagString: Monster
@@ -2073,6 +2074,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7055822323132822747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7379252335875583254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5
 --- !u!1 &7379252335875583264
 GameObject:
   m_ObjectHideFlags: 0

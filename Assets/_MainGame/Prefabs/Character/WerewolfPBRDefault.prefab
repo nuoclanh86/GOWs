@@ -518,6 +518,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5785497811905240769}
   - component: {fileID: 5785497811915092149}
+  - component: {fileID: -1714134738116268950}
   m_Layer: 6
   m_Name: WerewolfPBRDefault
   m_TagString: Monster
@@ -563,6 +564,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-1714134738116268950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785497811905594081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5
 --- !u!1 &5785497811905594083
 GameObject:
   m_ObjectHideFlags: 0

@@ -1183,6 +1183,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1868034469679584471}
   - component: {fileID: 1868034469688589173}
+  - component: {fileID: 6482100226214360144}
   m_Layer: 6
   m_Name: WormMonsterPBRMaskTint
   m_TagString: Monster
@@ -1228,3 +1229,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6482100226214360144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868034469679089911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5

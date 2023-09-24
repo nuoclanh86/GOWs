@@ -634,6 +634,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7581544333512942693}
   - component: {fileID: 7581544333505776583}
+  - component: {fileID: -6262019284238318300}
   m_Layer: 6
   m_Name: WormMonsterPBRDefault
   m_TagString: Monster
@@ -679,6 +680,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-6262019284238318300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7581544333513177157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5
 --- !u!1 &7581544333513177159
 GameObject:
   m_ObjectHideFlags: 0

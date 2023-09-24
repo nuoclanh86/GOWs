@@ -355,6 +355,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7117284730185207498}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4070703787205184967}
   m_SourcePrefab: {fileID: 100100000, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
 --- !u!1 &7636659018003081 stripped
 GameObject:
@@ -506,6 +509,21 @@ MonoBehaviour:
   CheckMovementInitialOverlaps: 1
   KillVelocityWhenExceedMaxMovementIterations: 1
   KillRemainingMovementWhenExceedMaxMovementIterations: 1
+--- !u!114 &4070703787205184967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7636659018003081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f4c4f75f5e0b4840a0302a00334c3f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  baseDamage: 20
+  baseArmour: 5
 --- !u!4 &2736207786410789663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6259231428175166265, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}

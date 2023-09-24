@@ -155,6 +155,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2219292830553816709}
   - component: {fileID: 2219292830544548193}
+  - component: {fileID: -2652241116182329830}
   m_Layer: 6
   m_Name: ChestMonsterPBRDefault
   m_TagString: Monster
@@ -200,6 +201,21 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2652241116182329830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219292830553907877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 30
+  baseDamage: 10
+  baseArmour: 5
 --- !u!1 &2219292830553907879
 GameObject:
   m_ObjectHideFlags: 0
