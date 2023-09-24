@@ -927,7 +927,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.433
+  m_Value: 0.264
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1220,6 +1220,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameUI: {fileID: 2445159342437616590}
   inGameMenu: {fileID: 4011132554529563641}
+  monsterKilled: {fileID: 5951164862616571348}
+  hpFill: {fileID: 6439018646335059962}
 --- !u!1001 &2977923954224501445
 PrefabInstance:
   m_ObjectHideFlags: 0
