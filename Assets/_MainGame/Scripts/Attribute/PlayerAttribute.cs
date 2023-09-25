@@ -39,7 +39,7 @@ public class PlayerAttribute : CharAttribute
         this.AddAttributeArmour(iAttribute.GetArmour());
 
         //active item
-        GameObject createItem = Instantiate(item, Vector3.zero, Quaternion.identity, this.transform);
+        GameObject createItem = Instantiate(item, Vector3.up, Quaternion.identity, this.transform);
         createItem.GetComponentInChildren<WeaponAttribute>().SetItemActive(true);
     }
 }

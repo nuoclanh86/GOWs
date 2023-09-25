@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Monster
   - Item
+  - Weapon
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Obstacle
   - Item
   - Wall
-  - 
+  - Weapon
   - 
   - 
   - 
