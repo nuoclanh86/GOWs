@@ -16,6 +16,11 @@ public class Attribute : MonoBehaviour
         armour = attributeSO.armourAttribute;
     }
 
+    protected virtual void Update()
+    {
+
+    }
+
     public int GetHealth() { return health; }
     public int GetDamage() { return damage; }
     public int GetArmour() { return armour; }

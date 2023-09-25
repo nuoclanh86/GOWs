@@ -40,6 +40,6 @@ public class PlayerAttribute : CharAttribute
 
         //active item
         GameObject createItem = Instantiate(item, Vector3.zero, Quaternion.identity, this.transform);
-        // createItem.GetComponent<ItemControlller>().SetItemActive(true);
+        createItem.GetComponent<WeaponAttribute>().SetItemActive(true);
     }
 }

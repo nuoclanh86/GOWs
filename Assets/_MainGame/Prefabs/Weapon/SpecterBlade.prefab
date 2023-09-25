@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4418275436930780783}
   - component: {fileID: 792358160778707402}
   - component: {fileID: 3250458486114891008}
-  - component: {fileID: -191003218243462505}
+  - component: {fileID: 4238341205935625814}
   m_Layer: 0
   m_Name: SpecterBlade
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &-191003218243462505
+--- !u!114 &4238341205935625814
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3898726074190107861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69ece931c0578884eba838abfe63afe9, type: 3}
+  m_Script: {fileID: 11500000, guid: 71e08ae48a45dc0408d2e39906c68169, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributeSO: {fileID: 11400000, guid: fdc05a2d711519a48a3d00ce3fcf2227, type: 2}
+  attributeSO: {fileID: 11400000, guid: a5638599e8397dd42a0d6bdea728ea4f, type: 2}

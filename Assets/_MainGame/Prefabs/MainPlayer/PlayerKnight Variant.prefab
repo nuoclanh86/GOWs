@@ -522,7 +522,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attributeSO: {fileID: 11400000, guid: a12d5c568a56e9d4599fddaca68af511, type: 2}
-  items: []
+  tempLoadedItems:
+  - {fileID: 8974985598195112227, guid: 0aa614d72ef843078eb4ab791741cb33, type: 3}
 --- !u!4 &2736207786410789663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6259231428175166265, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}
