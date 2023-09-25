@@ -25,8 +25,13 @@ public class GameManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
 
+    public void LoadScene(MAPSCENE scene)
+    {
+        SceneManager.LoadSceneAsync(scene.ToString());
+    }
+
     public void LoadMainMenuScene()
     {
-        SceneManager.LoadSceneAsync(MAPSCENE._MainMenu.ToString());
+        LoadScene(MAPSCENE._MainMenu);
     }
 }
