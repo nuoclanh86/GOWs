@@ -16,5 +16,6 @@ MonoBehaviour:
   healthAttribute: 0
   damageAttribute: 50
   armourAttribute: 1
-  cooldownAttribute: 0.5
-  angleHit: 50
+  cooldownAttribute: 2
+  angleHit: 120
+  speedRotate: 20

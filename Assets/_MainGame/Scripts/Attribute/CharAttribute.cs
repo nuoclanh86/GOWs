@@ -26,7 +26,7 @@ public class CharAttribute : Attribute
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        Debug.Log("OnTriggerEnter other : " + other.name);
+        // Debug.Log("OnTriggerEnter other : " + other.name);
         if (other.tag == "Player" || other.tag == "Monster")
         {
             CharAttribute cA = other.GetComponent<CharAttribute>();

@@ -6,4 +6,5 @@ using UnityEngine;
 public class MeeleWeaponScriptableObject : WeaponScriptableObject
 {
     public float angleHit;
+    public float speedRotate = 1.0f;
 }
