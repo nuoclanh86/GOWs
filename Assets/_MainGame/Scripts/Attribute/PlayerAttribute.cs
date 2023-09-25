@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class PlayerAttribute : CharAttribute
 {
-    public List<ItemAttribute> items;
+    public List<GameObject> tempLoadedItems;
 
     protected override void Start()
     {
         base.Start();
-        foreach (ItemAttribute i in items)
+        foreach (GameObject i in tempLoadedItems)
         {
-
+            AddItemToChar(i);
         }
     }
 
@@ -29,5 +29,17 @@ public class PlayerAttribute : CharAttribute
     protected override void TriggerCharacterDead()
     {
         ActionPhaseManager.GetInstance().PauseGame(true);
+    }
+
+    public void AddItemToChar(GameObject item)
+    {
+        ItemAttribute iAttribute = item.GetComponent<ItemAttribute>();
+        this.AddAttributeHealth(iAttribute.GetHealth());
+        // this.AddAttributeDamage(item.GetDamage());
+        this.AddAttributeArmour(iAttribute.GetArmour());
+
+        //active item
+        GameObject createItem = Instantiate(item, Vector3.zero, Quaternion.identity, this.transform);
+        // createItem.GetComponent<ItemControlller>().SetItemActive(true);
     }
 }
