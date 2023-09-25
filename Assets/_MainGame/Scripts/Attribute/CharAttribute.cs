@@ -2,37 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharAttribute : MonoBehaviour
+public class CharAttribute : Attribute
 {
-    public CharScriptableObject charSO;
-
-    protected int maxHealth;
-    protected int baseDamage;
-    protected int baseArmour;
-
-
     protected int curHealth;
     protected int curDamage;
     protected int curArmour;
 
-    protected virtual void Start()
+    protected override void Start()
     {
-        maxHealth = charSO.charBaseHealth;
-        baseDamage = charSO.charBaseDamage;
-        baseArmour = charSO.charBaseArmour;
-
-        curHealth = maxHealth;
-        curDamage = baseDamage;
-        curArmour = baseArmour;
+        base.Start();
+        curHealth = health;
+        curDamage = damage;
+        curArmour = armour;
     }
 
     public int GetCurHealth() { return curHealth; }
     public int GetCurDamage() { return curDamage; }
     public int GetCurArmour() { return curArmour; }
 
-    public void AddAttributeHealth(int val) { maxHealth += val; }
-    public void AddAttributeDamage(int val) { baseDamage += val; }
-    public void AddAttributeArmour(int val) { baseArmour += val; }
+    public void AddAttributeHealth(int val) { health += val; }
+    public void AddAttributeDamage(int val) { damage += val; }
+    public void AddAttributeArmour(int val) { armour += val; }
 
     protected virtual void OnTriggerEnter(Collider other)
     {
@@ -53,11 +43,11 @@ public class CharAttribute : MonoBehaviour
 
     public void RestoreHP(int amount)
     {
-        if (curHealth < maxHealth)
+        if (curHealth < health)
         {
             curHealth += amount;
-            if (curHealth > maxHealth)
-                curHealth = maxHealth;
+            if (curHealth > health)
+                curHealth = health;
         }
     }
 

@@ -16,13 +16,13 @@ public class MonsterAttribute : CharAttribute
 
     protected override void UpdateHPBar()
     {
-        Debug.Log("UpdateHPBar : " + curHealth + " / " + maxHealth);
+        Debug.Log("UpdateHPBar : " + curHealth + " / " + health);
         if (curHealth <= 0)
         {
             curHealth = 0;
             TriggerCharacterDead();
         }
-        hpBar.value = (float)curHealth / maxHealth;
+        hpBar.value = (float)curHealth / health;
     }
 
     protected override void TriggerCharacterDead()

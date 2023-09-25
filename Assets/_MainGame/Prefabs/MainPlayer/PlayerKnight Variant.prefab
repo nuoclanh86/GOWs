@@ -521,7 +521,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f4c4f75f5e0b4840a0302a00334c3f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charSO: {fileID: 11400000, guid: 23a1d70a047814b41bebe70a48c86fdc, type: 2}
+  attributeSO: {fileID: 11400000, guid: a12d5c568a56e9d4599fddaca68af511, type: 2}
+  items: []
 --- !u!4 &2736207786410789663 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -6259231428175166265, guid: 2ebce521ff6a5bd4e893a359e8aa411d, type: 3}

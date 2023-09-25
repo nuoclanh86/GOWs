@@ -17,22 +17,17 @@ public class PlayerAttribute : CharAttribute
 
     protected override void UpdateHPBar()
     {
-        Debug.Log("UpdateHPBar : " + curHealth + " / " + maxHealth);
+        Debug.Log("UpdateHPBar : " + curHealth + " / " + health);
         if (curHealth <= 0)
         {
             curHealth = 0;
             TriggerCharacterDead();
         }
-        ActionPhaseManager.GetInstance().UpdateHPMainPlayerBar((float)curHealth / maxHealth);
+        ActionPhaseManager.GetInstance().UpdateHPMainPlayerBar((float)curHealth / health);
     }
 
     protected override void TriggerCharacterDead()
     {
         ActionPhaseManager.GetInstance().PauseGame(true);
-    }
-
-    protected override void OnTriggerEnter(Collider other)
-    {
-
     }
 }
