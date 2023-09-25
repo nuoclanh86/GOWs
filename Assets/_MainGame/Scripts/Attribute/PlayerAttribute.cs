@@ -33,13 +33,13 @@ public class PlayerAttribute : CharAttribute
 
     public void AddItemToChar(GameObject item)
     {
-        ItemAttribute iAttribute = item.GetComponent<ItemAttribute>();
+        ItemAttribute iAttribute = item.GetComponentInChildren<ItemAttribute>();
         this.AddAttributeHealth(iAttribute.GetHealth());
         // this.AddAttributeDamage(item.GetDamage());
         this.AddAttributeArmour(iAttribute.GetArmour());
 
         //active item
         GameObject createItem = Instantiate(item, Vector3.zero, Quaternion.identity, this.transform);
-        createItem.GetComponent<WeaponAttribute>().SetItemActive(true);
+        createItem.GetComponentInChildren<WeaponAttribute>().SetItemActive(true);
     }
 }
