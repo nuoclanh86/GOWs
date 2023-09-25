@@ -15,7 +15,7 @@ public class CharAttribute : MonoBehaviour
     protected int curDamage;
     protected int curArmour;
 
-    protected void Start()
+    protected virtual void Start()
     {
         maxHealth = charSO.charBaseHealth;
         baseDamage = charSO.charBaseDamage;
@@ -33,6 +33,16 @@ public class CharAttribute : MonoBehaviour
     public void AddAttributeHealth(int val) { maxHealth += val; }
     public void AddAttributeDamage(int val) { baseDamage += val; }
     public void AddAttributeArmour(int val) { baseArmour += val; }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("OnTriggerEnter other : " + other.name);
+        if (other.tag == "Player" || other.tag == "Monster")
+        {
+            CharAttribute cA = other.GetComponent<CharAttribute>();
+            cA.WasHit(this.curDamage);
+        }
+    }
 
     public void WasHit(int attDmg)
     {

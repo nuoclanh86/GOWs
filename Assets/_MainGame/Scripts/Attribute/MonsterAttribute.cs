@@ -1,16 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonsterAttribute : CharAttribute
 {
-    private void OnTriggerEnter(Collider other)
+    Slider hpBar;
+
+    protected override void Start()
     {
-        Debug.Log("OnTriggerEnter other : " + other.name);
-        if (other.tag == "Player")
+        base.Start();
+        hpBar = this.GetComponentInChildren<Slider>();
+        hpBar.value = 1.0f;
+    }
+
+    protected override void UpdateHPBar()
+    {
+        Debug.Log("UpdateHPBar : " + curHealth + " / " + maxHealth);
+        if (curHealth <= 0)
         {
-            PlayerAttribute pA = other.GetComponent<PlayerAttribute>();
-            pA.WasHit(this.curDamage);
+            curHealth = 0;
+            TriggerCharacterDead();
         }
+        hpBar.value = (float)curHealth / maxHealth;
+    }
+
+    protected override void TriggerCharacterDead()
+    {
+        this.gameObject.SetActive(false);
     }
 }

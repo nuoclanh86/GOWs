@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class PlayerAttribute : CharAttribute
 {
+    public List<ItemAttribute> items;
+
+    protected override void Start()
+    {
+        base.Start();
+        foreach (ItemAttribute i in items)
+        {
+
+        }
+    }
+
     protected override void UpdateHPBar()
     {
         Debug.Log("UpdateHPBar : " + curHealth + " / " + maxHealth);
@@ -18,5 +29,10 @@ public class PlayerAttribute : CharAttribute
     protected override void TriggerCharacterDead()
     {
         ActionPhaseManager.GetInstance().PauseGame(true);
+    }
+
+    protected override void OnTriggerEnter(Collider other)
+    {
+
     }
 }
