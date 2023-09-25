@@ -7,7 +7,7 @@ public class PlayerAttribute : CharAttribute
     protected override void UpdateHPBar()
     {
         Debug.Log("UpdateHPBar : " + curHealth + " / " + maxHealth);
-        if (curHealth < 0)
+        if (curHealth <= 0)
         {
             curHealth = 0;
             TriggerCharacterDead();

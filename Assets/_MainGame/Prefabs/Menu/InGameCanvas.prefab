@@ -1220,6 +1220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameUI: {fileID: 2445159342437616590}
   inGameMenu: {fileID: 4011132554529563641}
+  resumeBtn: {fileID: 4512205118858463963}
   monsterKilled: {fileID: 5951164862616571348}
   hpFill: {fileID: 7864841631303701344}
 --- !u!1001 &2977923954224501445
@@ -1343,6 +1344,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+--- !u!1 &4512205118858463963 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1715067341851564062, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+  m_PrefabInstance: {fileID: 2977923954224501445}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &5641966427459378557 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}

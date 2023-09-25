@@ -30,13 +30,13 @@ public class InGameUIController : MonoBehaviour
 
     }
 
-    public void ShowInGameUI(bool val)
+    public void ShowInGameUI(bool isShowInGameUI, bool isPlayerDead = false)
     {
-        inGameUI.SetActive(val);
-        inGameMenu.SetActive(!val);
-        if (val == false)
+        inGameUI.SetActive(isShowInGameUI);
+        inGameMenu.SetActive(!isShowInGameUI);
+        if (isShowInGameUI == false)
         {
-            PauseGame();
+            PauseGame(isPlayerDead);
         }
         else
         {

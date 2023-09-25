@@ -132,6 +132,6 @@ public class ActionPhaseManager : MonoBehaviour
 
     public void PauseGame(bool isPlayerDead = false)
     {
-        inGameUIController.PauseGame(isPlayerDead);
+        inGameUIController.ShowInGameUI(false, isPlayerDead);
     }
 }
