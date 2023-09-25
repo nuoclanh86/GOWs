@@ -2,17 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Attribute : MonoBehaviour
+public class CharAttribute : MonoBehaviour
 {
-    [SerializeField] protected int maxHealth;
+    public CharScriptableObject charSO;
+
+    protected int maxHealth;
+    protected int baseDamage;
+    protected int baseArmour;
+
+
     protected int curHealth;
-    [SerializeField] protected int baseDamage;
     protected int curDamage;
-    [SerializeField] protected int baseArmour;
     protected int curArmour;
 
-    void Start()
+    protected void Start()
     {
+        maxHealth = charSO.charBaseHealth;
+        baseDamage = charSO.charBaseDamage;
+        baseArmour = charSO.charBaseArmour;
+
         curHealth = maxHealth;
         curDamage = baseDamage;
         curArmour = baseArmour;
@@ -21,6 +29,10 @@ public class Attribute : MonoBehaviour
     public int GetCurHealth() { return curHealth; }
     public int GetCurDamage() { return curDamage; }
     public int GetCurArmour() { return curArmour; }
+
+    public void AddAttributeHealth(int val) { maxHealth += val; }
+    public void AddAttributeDamage(int val) { baseDamage += val; }
+    public void AddAttributeArmour(int val) { baseArmour += val; }
 
     public void WasHit(int attDmg)
     {

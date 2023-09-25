@@ -787,6 +787,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4e89f934763d1d4b832c5a78cbad774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  baseDamage: 10
-  baseArmour: 2
+  charSO: {fileID: 11400000, guid: 225c6992d2a933b4086b487facec7756, type: 2}

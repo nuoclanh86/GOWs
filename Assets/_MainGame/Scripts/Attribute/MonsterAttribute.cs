@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterAttribute : Attribute
+public class MonsterAttribute : CharAttribute
 {
     private void OnTriggerEnter(Collider other)
     {
