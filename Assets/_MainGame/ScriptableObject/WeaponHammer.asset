@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecc4d4004072e734da08dead126fb1d5, type: 3}
   m_Name: WeaponHammer
   m_EditorClassIdentifier: 
-  nameAttribute: 
+  nameAttribute: HammerWeapon
   healthAttribute: 0
-  damageAttribute: 0
-  armourAttribute: 0
-  cooldownAttribute: 0
+  damageAttribute: 50
+  armourAttribute: 1
+  cooldownAttribute: 0.5
