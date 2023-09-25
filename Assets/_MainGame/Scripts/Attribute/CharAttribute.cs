@@ -55,4 +55,9 @@ public class CharAttribute : MonoBehaviour
     {
 
     }
+
+    protected virtual void TriggerCharacterDead()
+    {
+
+    }
 }

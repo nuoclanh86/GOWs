@@ -129,4 +129,9 @@ public class ActionPhaseManager : MonoBehaviour
     {
         inGameUIController.hpFill.value = val;
     }
+
+    public void PauseGame(bool isPlayerDead = false)
+    {
+        inGameUIController.PauseGame(isPlayerDead);
+    }
 }

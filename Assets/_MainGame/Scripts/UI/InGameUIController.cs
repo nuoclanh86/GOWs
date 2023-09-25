@@ -8,6 +8,7 @@ public class InGameUIController : MonoBehaviour
 {
     public GameObject inGameUI;
     public GameObject inGameMenu;
+    public GameObject resumeBtn;
 
     public TextMeshProUGUI monsterKilled;
     const string monsterKilledText = "Killed : ";
@@ -45,11 +46,13 @@ public class InGameUIController : MonoBehaviour
 
     public void ExitToMainMenu()
     {
-
+        GameManager.GetInstance().LoadMainMenuScene();
     }
-    void PauseGame()
+    public void PauseGame(bool isPlayerDead = false)
     {
         Time.timeScale = 0;
+        if (isPlayerDead == true)
+            resumeBtn.GetComponent<Button>().interactable = false;
     }
     void ResumeGame()
     {
