@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   nameAttribute: 
-  healthAttribute: 0
-  damageAttribute: 0
-  armourAttribute: 0
+  healthAttribute: 100
+  damageAttribute: 10
+  armourAttribute: 5

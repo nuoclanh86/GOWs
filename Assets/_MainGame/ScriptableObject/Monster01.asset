@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adad2d255a966542a04f20bb439a85f, type: 3}
   m_Name: Monster01
   m_EditorClassIdentifier: 
-  nameAttribute: 
-  healthAttribute: 0
-  damageAttribute: 0
-  armourAttribute: 0
+  nameAttribute: Monster01
+  healthAttribute: 70
+  damageAttribute: 30
+  armourAttribute: 2
