@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6adad2d255a966542a04f20bb439a85f, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  nameAttribute: 
+  nameAttribute: MainPlayer
   healthAttribute: 100
   damageAttribute: 10
   armourAttribute: 5
