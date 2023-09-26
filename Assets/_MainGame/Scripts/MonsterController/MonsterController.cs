@@ -30,7 +30,7 @@ public class MonsterController : MonoBehaviour
     protected Collider colliderMonster;
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         mtarget = null;
         monsterState = MonsterState.Idle;
