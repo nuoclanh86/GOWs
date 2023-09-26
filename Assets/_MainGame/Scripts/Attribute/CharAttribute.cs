@@ -7,10 +7,14 @@ public class CharAttribute : Attribute
     protected int curHealth;
     protected int curDamage;
     protected int curArmour;
+    
+    protected float movementSpeed;
 
     protected override void Start()
     {
         base.Start();
+        movementSpeed = attributeSO.movementSpeedAttribute;
+
         curHealth = health;
         curDamage = damage;
         curArmour = armour;
@@ -19,6 +23,7 @@ public class CharAttribute : Attribute
     public int GetCurHealth() { return curHealth; }
     public int GetCurDamage() { return curDamage; }
     public int GetCurArmour() { return curArmour; }
+    public float GetMovementSpeed() { return movementSpeed; }
 
     public void AddAttributeHealth(int val) { health += val; }
     public void AddAttributeDamage(int val) { damage += val; }

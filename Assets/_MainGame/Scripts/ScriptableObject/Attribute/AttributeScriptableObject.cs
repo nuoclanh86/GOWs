@@ -9,4 +9,5 @@ public class AttributeScriptableObject : ScriptableObject
     public int healthAttribute;
     public int damageAttribute;
     public int armourAttribute;
+    public float movementSpeedAttribute;
 }

@@ -143,4 +143,9 @@ public class ActionPhaseManager : MonoBehaviour
     {
         inGameUIController.PauseGame(isPlayerDead);
     }
+
+    public GameObject GetMainPlayer()
+    {
+        return mainPlayer;
+    }
 }

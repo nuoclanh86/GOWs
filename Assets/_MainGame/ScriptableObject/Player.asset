@@ -16,3 +16,4 @@ MonoBehaviour:
   healthAttribute: 100
   damageAttribute: 10
   armourAttribute: 5
+  movementSpeedAttribute: 15
