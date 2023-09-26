@@ -8,7 +8,7 @@ public class MonstersManager : MonoBehaviour
     // [SerializeField] List<GameObject> spawnAreas;
     [SerializeField] float maxDistanceSpawn = 30.0f;
     [SerializeField] float minDistanceSpawn = 3.0f;
-    [HideInInspector] public List<GameObject> monstersDeadList;
+    [HideInInspector] public List<GameObject> monstersSpawnedList;
 
     Timer cooldownPerSpawn;
 
@@ -25,7 +25,7 @@ public class MonstersManager : MonoBehaviour
         cooldownPerSpawn = new Timer();
         cooldownPerSpawn.SetDuration(mapLevelSO.cooldownPerSpawn);
 
-        monstersDeadList = new List<GameObject>();
+        monstersSpawnedList = new List<GameObject>();
 
         SpawnMonster();
     }
@@ -61,15 +61,23 @@ public class MonstersManager : MonoBehaviour
                 spawnPos += ((spawnPos - playerPos).normalized * minDistanceSpawn);
             }
 
-            if (monstersDeadList.Count > 0)
+            bool createdMonster = false;
+            if (monstersSpawnedList.Count > 0)
             {
-                RebornDeadMonster(monstersDeadList[0], spawnPos);
-                monstersDeadList.RemoveAt(0);
+                foreach (GameObject m in monstersSpawnedList)
+                {
+                    if (m.activeInHierarchy == false)
+                    {
+                        RebornDeadMonster(m, spawnPos);
+                        createdMonster = true;
+                    }
+                }
             }
-            else
+            if (createdMonster == false)
             {
                 int randomIndex = Random.Range(0, mapLevelSO.monsters.Count);
-                Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
+                GameObject go = Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
+                monstersSpawnedList.Add(go);
             }
         }
         ActionPhaseManager.GetInstance().UpdateTotalMonsterOnScreen(mapLevelSO.numbersMonsterPerSpawn);
