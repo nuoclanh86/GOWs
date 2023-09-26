@@ -23,3 +23,5 @@ MonoBehaviour:
   - {fileID: 674681132531446715, guid: e3c78b2b1f2564645bd7532cd061570e, type: 3}
   cooldownPerSpawn: 1
   numbersMonsterPerSpawn: 100
+  maxDistanceSpawn: 30
+  minDistanceSpawn: 5

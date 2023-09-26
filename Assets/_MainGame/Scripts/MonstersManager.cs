@@ -6,8 +6,8 @@ public class MonstersManager : MonoBehaviour
 {
     public MapLevelSO mapLevelSO;
     // [SerializeField] List<GameObject> spawnAreas;
-    [SerializeField] float maxDistanceSpawn = 30.0f;
-    [SerializeField] float minDistanceSpawn = 3.0f;
+    float mMaxDistanceSpawn = 30.0f;
+    float mMinDistanceSpawn = 3.0f;
     [HideInInspector] public List<GameObject> monstersSpawnedList;
 
     Timer cooldownPerSpawn;
@@ -24,6 +24,8 @@ public class MonstersManager : MonoBehaviour
     {
         cooldownPerSpawn = new Timer();
         cooldownPerSpawn.SetDuration(mapLevelSO.cooldownPerSpawn);
+        mMinDistanceSpawn = mapLevelSO.minDistanceSpawn;
+        mMaxDistanceSpawn = mapLevelSO.maxDistanceSpawn;
 
         monstersSpawnedList = new List<GameObject>();
 
@@ -47,18 +49,18 @@ public class MonstersManager : MonoBehaviour
         Vector3 playerPos = Vector3.zero;
         if (ActionPhaseManager.GetInstance().GetMainPlayer())
             playerPos = ActionPhaseManager.GetInstance().GetMainPlayer().transform.position;
-        float minX = playerPos.x - maxDistanceSpawn;
-        float maxX = playerPos.x + maxDistanceSpawn;
-        float minZ = playerPos.z - maxDistanceSpawn;
-        float maxZ = playerPos.z + maxDistanceSpawn;
+        float minX = playerPos.x - mMaxDistanceSpawn;
+        float maxX = playerPos.x + mMaxDistanceSpawn;
+        float minZ = playerPos.z - mMaxDistanceSpawn;
+        float maxZ = playerPos.z + mMaxDistanceSpawn;
 
         Vector3 spawnPos = Vector3.zero;
         for (int i = 0; i < mapLevelSO.numbersMonsterPerSpawn; i++)
         {
             spawnPos = new Vector3(Random.Range(minX, maxX), 0.0f, Random.Range(minZ, maxZ));
-            if (Vector3.Distance(spawnPos, playerPos) < minDistanceSpawn)
+            if (Vector3.Distance(spawnPos, playerPos) < mMinDistanceSpawn)
             {
-                spawnPos += ((spawnPos - playerPos).normalized * minDistanceSpawn);
+                spawnPos += ((spawnPos - playerPos).normalized * mMinDistanceSpawn);
             }
 
             bool createdMonster = false;

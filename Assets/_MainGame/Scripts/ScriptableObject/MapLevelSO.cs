@@ -8,4 +8,10 @@ public class MapLevelSO : ScriptableObject
     public List<GameObject> monsters;
     public float cooldownPerSpawn;
     public int numbersMonsterPerSpawn;
+    
+    //distance from spawn pos to monster
+    [Tooltip("Distance from spawnpos to mainplayer.")]
+    public float maxDistanceSpawn = 30.0f;
+    [Tooltip("Distance from spawnpos to mainplayer.")]
+    public float minDistanceSpawn = 3.0f;
 }
