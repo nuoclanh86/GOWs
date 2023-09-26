@@ -28,6 +28,7 @@ public class MonsterController : MonoBehaviour
     protected float moveSpeed;
 
     [SerializeField] float disableMonsterDeadDelay = 2.0f;
+    [SerializeField] Collider collider;
 
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,7 @@ public class MonsterController : MonoBehaviour
     }
     public void MonsterDead()
     {
+        collider.enabled = false;
         monsterState = MonsterState.Die;
         TriggerAnim((int)MonsterAnim.Die);
         StartCoroutine(DisableMonsterDead(disableMonsterDeadDelay));

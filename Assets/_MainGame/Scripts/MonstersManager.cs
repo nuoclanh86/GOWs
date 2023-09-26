@@ -45,7 +45,7 @@ public class MonstersManager : MonoBehaviour
         for (int i = 0; i < mapLevelSO.numbersMonsterPerSpawn; i++)
         {
             int randomIndex = Random.Range(0, mapLevelSO.monsters.Count);
-            spawnPos = new Vector3(Random.Range(minX, maxX), 1.0f, Random.Range(minZ, maxZ));
+            spawnPos = new Vector3(Random.Range(minX, maxX), 0.0f, Random.Range(minZ, maxZ));
             if (Vector3.Distance(spawnPos, playerPos) < minDistanceSpawn)
             {
                 spawnPos += ((spawnPos - playerPos).normalized * minDistanceSpawn);

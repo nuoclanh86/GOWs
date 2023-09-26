@@ -122,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   disableMonsterDeadDelay: 2
+  collider: {fileID: 1385257149698227497}
   speedChasing: 10
 --- !u!1001 &8430834989531397307
 PrefabInstance:
