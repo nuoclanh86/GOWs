@@ -47,7 +47,8 @@ public class MeeleMonsterController : MonsterController
 
         if (timerChasing.IsDone())
         {
-            monsterState = MonsterState.Idle;
+            if (monsterState == MonsterState.UseSkill)
+                monsterState = MonsterState.Idle;
         }
         else
         {
