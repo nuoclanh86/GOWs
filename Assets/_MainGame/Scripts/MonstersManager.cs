@@ -5,6 +5,7 @@ using UnityEngine;
 public class MonstersManager : MonoBehaviour
 {
     public MapLevelSO mapLevelSO;
+    [SerializeField] List<GameObject> spawnAreas;
 
     Timer cooldownPerSpawn;
 
@@ -31,10 +32,16 @@ public class MonstersManager : MonoBehaviour
 
     void SpawnMonster()
     {
+        int randomSpawnAreaIndex = Random.Range(0, spawnAreas.Count);
+        Transform areaTransform = spawnAreas[randomSpawnAreaIndex].transform;
+        float minX = areaTransform.position.x - areaTransform.localScale.x / 2;
+        float maxX = areaTransform.position.x + areaTransform.localScale.x / 2;
+        float minZ = areaTransform.position.z - areaTransform.localScale.z / 2;
+        float maxZ = areaTransform.position.z + areaTransform.localScale.z / 2;
         for (int i = 0; i < mapLevelSO.numbersMonsterPerSpawn; i++)
         {
             int randomIndex = Random.Range(0, mapLevelSO.monsters.Count);
-            Vector3 spawnPos = Vector3.zero;
+            Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), 1.0f, Random.Range(minZ, maxZ));
             GameObject monster = Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
             // monster.GetComponent<MonsterController>().MovingToTarget();
         }
