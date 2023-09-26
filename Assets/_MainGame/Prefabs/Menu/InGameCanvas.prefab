@@ -438,7 +438,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8589545603056888981}
         m_TargetAssemblyTypeName: InGameUIController, Assembly-CSharp
-        m_MethodName: ShowInGameUI
+        m_MethodName: PauseGame
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1241,7 +1241,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1249,7 +1249,7 @@ PrefabInstance:
       objectReference: {fileID: 8589545603056888981}
     - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ShowInGameUI
+      value: ResumeGame
       objectReference: {fileID: 0}
     - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName

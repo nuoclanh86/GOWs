@@ -12,37 +12,39 @@ public class InGameUIController : MonoBehaviour
 
     public TextMeshProUGUI monsterKilled;
     const string monsterKilledText = "Killed : ";
-    int amountMonsterKilled = 0;
     public Slider hpFill;
 
     // Start is called before the first frame update
     void Start()
     {
-        ShowInGameUI(true);
-        amountMonsterKilled = 0;
-        monsterKilled.text = monsterKilledText + amountMonsterKilled;
+        ResumeGame();
+        UpdateMonsterKilled(0);
         hpFill.value = 1.0f;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    // // Update is called once per frame
+    // void Update()
+    // {
 
+    // }
+    public void UpdateMonsterKilled(int val)
+    {
+        monsterKilled.text = monsterKilledText + val;
     }
 
-    public void ShowInGameUI(bool isShowInGameUI, bool isPlayerDead = false)
-    {
-        inGameUI.SetActive(isShowInGameUI);
-        inGameMenu.SetActive(!isShowInGameUI);
-        if (isShowInGameUI == false)
-        {
-            PauseGame(isPlayerDead);
-        }
-        else
-        {
-            ResumeGame();
-        }
-    }
+    // public void ShowInGameUI(bool isShowInGameUI, bool isPlayerDead = false)
+    // {
+    //     inGameUI.SetActive(isShowInGameUI);
+    //     inGameMenu.SetActive(!isShowInGameUI);
+    //     if (isShowInGameUI == false)
+    //     {
+    //         PauseGameUI(isPlayerDead);
+    //     }
+    //     else
+    //     {
+    //         ResumeGameUI();
+    //     }
+    // }
 
     public void ExitToMainMenu()
     {
@@ -50,12 +52,16 @@ public class InGameUIController : MonoBehaviour
     }
     public void PauseGame(bool isPlayerDead = false)
     {
+        inGameUI.SetActive(false);
+        inGameMenu.SetActive(true);
         Time.timeScale = 0;
         if (isPlayerDead == true)
             resumeBtn.GetComponent<Button>().interactable = false;
     }
-    void ResumeGame()
+    public void ResumeGame()
     {
+        inGameUI.SetActive(true);
+        inGameMenu.SetActive(false);
         Time.timeScale = 1;
     }
 }
