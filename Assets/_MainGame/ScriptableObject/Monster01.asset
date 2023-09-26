@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Monster01
   m_EditorClassIdentifier: 
   nameAttribute: Monster01
-  healthAttribute: 70
+  healthAttribute: 50
   damageAttribute: 30
   armourAttribute: 2
-  movementSpeedAttribute: 10
+  movementSpeedAttribute: 1.5

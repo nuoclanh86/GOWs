@@ -59,7 +59,11 @@ PrefabInstance:
     - target: {fileID: 3363578712092673648, guid: 081006b40189456788e7910500338317, type: 3}
       propertyPath: attributeSO
       value: 
-      objectReference: {fileID: 11400000, guid: fc3e614dc9903764a92346a6b9dfb7ec, type: 2}
+      objectReference: {fileID: 11400000, guid: 38abf13edd209194b9c56f14ecbea6db, type: 2}
+    - target: {fileID: 3363578712092673648, guid: 081006b40189456788e7910500338317, type: 3}
+      propertyPath: monsterController
+      value: 
+      objectReference: {fileID: -3373704293074791727}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -117,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c6314fa9414d454bae33f764932bf01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  disableMonsterDeadDelay: 2
   speedChasing: 10
 --- !u!1001 &8430834989531397307
 PrefabInstance:

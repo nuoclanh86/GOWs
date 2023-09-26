@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameAttribute: HammerWeapon
   healthAttribute: 0
-  damageAttribute: 50
+  damageAttribute: 55
   armourAttribute: 1
   movementSpeedAttribute: 0
   cooldownAttribute: 0.9
