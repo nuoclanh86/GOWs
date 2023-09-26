@@ -31,6 +31,8 @@ public class MeeleMonsterController : MonsterController
     protected void MovingToTarget(float speed)
     {
         transform.position = Vector3.MoveTowards(transform.position, mtarget.transform.position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(mtarget.transform.position - transform.position);
+        Vector3 lookDir = mtarget.transform.position - transform.position;
+        if (lookDir != Vector3.zero)
+            transform.rotation = Quaternion.LookRotation(lookDir);
     }
 }
