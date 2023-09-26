@@ -2,10 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MeeleMonsterController : MonsterController
+public class RangeMonsterController : MonsterController
 {
-    [SerializeField] float speedChasing;
-
     // Update is called once per frame
     protected override void Update()
     {
@@ -15,22 +13,14 @@ public class MeeleMonsterController : MonsterController
                 TriggerAnim((int)MonsterAnim.Idle);
                 break;
             case MonsterState.ChaseTarget:
-                TriggerAnim((int)MonsterAnim.Run);
-                MovingToTarget(moveSpeed);
+                TriggerAnim((int)MonsterAnim.Hit);
                 break;
             case MonsterState.UseSkill:
-                MovingToTarget(moveSpeed * speedChasing);
                 break;
             case MonsterState.Die:
                 break;
             default:
                 break;
         }
-    }
-
-    protected void MovingToTarget(float speed)
-    {
-        transform.position = Vector3.MoveTowards(transform.position, mtarget.transform.position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(mtarget.transform.position - transform.position);
     }
 }

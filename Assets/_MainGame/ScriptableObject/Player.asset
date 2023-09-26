@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Player
   m_EditorClassIdentifier: 
   nameAttribute: MainPlayer
-  healthAttribute: 100
+  healthAttribute: 200
   damageAttribute: 10
   armourAttribute: 5
   movementSpeedAttribute: 15

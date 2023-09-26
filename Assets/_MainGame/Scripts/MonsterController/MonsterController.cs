@@ -7,8 +7,7 @@ public class MonsterController : MonoBehaviour
     protected enum MonsterState
     {
         Idle,
-        MovingToTarget,
-        Hit,
+        ChaseTarget,
         UseSkill,
         Die
     }
@@ -23,12 +22,12 @@ public class MonsterController : MonoBehaviour
 
     Animator animatorMonster;
     MonsterAttribute monsterAttribute;
-    GameObject mtarget = null;
+    protected GameObject mtarget = null;
     protected MonsterState monsterState;
     protected float moveSpeed;
 
     [SerializeField] float disableMonsterDeadDelay = 2.0f;
-    [SerializeField] Collider collider;
+    protected Collider colliderMonster;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +36,7 @@ public class MonsterController : MonoBehaviour
         monsterState = MonsterState.Idle;
         monsterAttribute = this.GetComponent<MonsterAttribute>();
         animatorMonster = this.GetComponent<Animator>();
+        colliderMonster = this.GetComponent<Collider>();
         moveSpeed = monsterAttribute.GetMovementSpeed();
 
         SetTarget(ActionPhaseManager.GetInstance().GetMainPlayer());
@@ -50,11 +50,8 @@ public class MonsterController : MonoBehaviour
             case MonsterState.Idle:
                 TriggerAnim((int)MonsterAnim.Idle);
                 break;
-            case MonsterState.MovingToTarget:
+            case MonsterState.ChaseTarget:
                 TriggerAnim((int)MonsterAnim.Run);
-                break;
-            case MonsterState.Hit:
-                TriggerAnim((int)MonsterAnim.Hit);
                 break;
             case MonsterState.Die:
                 break;
@@ -68,25 +65,21 @@ public class MonsterController : MonoBehaviour
     public void SetTarget(GameObject target)
     {
         mtarget = target;
-        monsterState = MonsterState.MovingToTarget;
+        monsterState = MonsterState.ChaseTarget;
     }
     public void DeleteTarget()
     {
         mtarget = null;
         monsterState = MonsterState.Idle;
     }
-    protected void MovingToTarget(float speed)
-    {
-        transform.position = Vector3.MoveTowards(transform.position, mtarget.transform.position, speed * Time.deltaTime);
-        transform.rotation = Quaternion.LookRotation(mtarget.transform.position - transform.position);
-    }
+
     public void TriggerAnim(int animIndex)
     {
         animatorMonster.SetInteger("AnimIndex", animIndex);
     }
     public void MonsterDead()
     {
-        collider.enabled = false;
+        colliderMonster.enabled = false;
         monsterState = MonsterState.Die;
         TriggerAnim((int)MonsterAnim.Die);
         StartCoroutine(DisableMonsterDead(disableMonsterDeadDelay));
