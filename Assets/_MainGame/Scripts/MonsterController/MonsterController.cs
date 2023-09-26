@@ -72,6 +72,7 @@ public class MonsterController : MonoBehaviour
     protected void MovingToTarget(float speed)
     {
         transform.position = Vector3.MoveTowards(transform.position, mtarget.transform.position, speed * Time.deltaTime);
+        transform.rotation = Quaternion.LookRotation(mtarget.transform.position - transform.position);
     }
     protected void TriggerAnim(int animIndex)
     {
