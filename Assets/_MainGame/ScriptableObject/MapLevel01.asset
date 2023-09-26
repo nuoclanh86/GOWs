@@ -13,6 +13,13 @@ MonoBehaviour:
   m_Name: MapLevel01
   m_EditorClassIdentifier: 
   monsters:
+  - {fileID: 8976521088059780213, guid: 2874ca056dcd2f447ae62ad00d7fe528, type: 3}
   - {fileID: 8926113138286593236, guid: f2865a47200afa14a8c94ce9edd40bf4, type: 3}
+  - {fileID: 3707194171544170014, guid: 19e45e38169bf064694a83799a97c9a7, type: 3}
+  - {fileID: 4705094336825333344, guid: c32a275b594037c47aa46d155a063144, type: 3}
+  - {fileID: 3705950566552633946, guid: 80a049e5d297b994483dde5fce078460, type: 3}
+  - {fileID: 262127117185791082, guid: 717de72602576a2438d078f26b33fb66, type: 3}
+  - {fileID: 8812630840262902606, guid: 5586ae1e327ee054fb81257c38ce7087, type: 3}
+  - {fileID: 674681132531446715, guid: e3c78b2b1f2564645bd7532cd061570e, type: 3}
   cooldownPerSpawn: 1
   numbersMonsterPerSpawn: 30
