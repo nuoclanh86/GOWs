@@ -17,7 +17,7 @@ public class WeaponAttribute : ItemAttribute
     WeaponState weaponState;
 
     float angleCount, mSpeedRotate, defaultSpeedRotate = 10.0f;
-    Quaternion fromRotation = Quaternion.identity;
+    float fromAngle = 0.0f;
 
     [SerializeField] GameObjectTrigger _childTrigger;
 
@@ -82,7 +82,8 @@ public class WeaponAttribute : ItemAttribute
         meshWeapon.gameObject.SetActive(true);
         cooldownTimer.Reset();
         angleCount = 0.0f;
-        this.transform.rotation = fromRotation;
+        // fromAngle = Random.Range(0.0f, 360.0f);
+        fromAngle = 0.0f;
     }
     void DoingWeaponRotateAction()
     {
@@ -90,7 +91,7 @@ public class WeaponAttribute : ItemAttribute
         // Debug.Log("DoingWeaponRotateAction : " + angleCount + " - " + mAngleHit);
         if (angleCount < mAngleHit)
         {
-            this.transform.rotation = Quaternion.AngleAxis(angleCount, Vector3.up);
+            this.transform.localRotation = Quaternion.AngleAxis(fromAngle + angleCount, Vector3.up);
         }
         else
         {
