@@ -46,15 +46,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 100
+      value: 139.46
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 100
+      value: 125.84
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.1
+      value: -60.3689
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -96.5
+      value: -83.5818
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterSpawnArea (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5944891331438470479, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -121,15 +125,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 120
+      value: 131.50801
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 120
+      value: 132.768
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 96
+      value: 90.2481
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -137,7 +141,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 81.6
+      value: 75.2172
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -171,6 +175,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MonsterSpawnArea (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5944891331438470479, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -196,15 +204,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 120
+      value: 132.16536
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 120
+      value: 135.15277
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -64.8
+      value: -58.7216
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -212,7 +220,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 75.1
+      value: 67.5228
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -245,6 +253,10 @@ PrefabInstance:
     - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_Name
       value: MonsterSpawnArea
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -328,15 +340,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 120
+      value: 129.91467
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 120
+      value: 134.0444
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 97.9
+      value: 92.9427
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -344,7 +356,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -82.1
+      value: -75.0785
       objectReference: {fileID: 0}
     - target: {fileID: 2416326878108800096, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -377,6 +389,10 @@ PrefabInstance:
     - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_Name
       value: MonsterSpawnArea (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3572959523231357642, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5944891331438470479, guid: 4fd92b8dfdc00f54fad8902ce99eeea8, type: 3}
       propertyPath: m_Materials.Array.data[0]

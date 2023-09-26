@@ -17,6 +17,6 @@ MonoBehaviour:
   damageAttribute: 50
   armourAttribute: 1
   movementSpeedAttribute: 0
-  cooldownAttribute: 0.4
+  cooldownAttribute: 0.9
   angleHit: 120
   speedRotate: 20
