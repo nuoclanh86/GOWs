@@ -16,7 +16,7 @@ public class MonsterAttribute : CharAttribute
 
     protected override void UpdateHPBar()
     {
-        Debug.Log("UpdateHPBar : " + curHealth + " / " + health);
+        // Debug.Log("UpdateHPBar : " + curHealth + " / " + health);
         if (curHealth <= 0)
         {
             curHealth = 0;
@@ -27,6 +27,7 @@ public class MonsterAttribute : CharAttribute
 
     protected override void TriggerCharacterDead()
     {
+        ActionPhaseManager.GetInstance().UpdateMonsterKilled();
         this.gameObject.SetActive(false);
     }
 }

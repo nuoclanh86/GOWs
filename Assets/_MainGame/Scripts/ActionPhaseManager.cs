@@ -14,9 +14,11 @@ public class ActionPhaseManager : MonoBehaviour
     GameObject mainPlayer;
     PlayerController mainPlayerController;
 
-    private const string MouseXInput = "Mouse X";
-    private const string MouseYInput = "Mouse Y";
-    private const string MouseScrollInput = "Mouse ScrollWheel";
+    int countKilled = 0;
+
+    // private const string MouseXInput = "Mouse X";
+    // private const string MouseYInput = "Mouse Y";
+    // private const string MouseScrollInput = "Mouse ScrollWheel";
     private const string HorizontalInput = "Horizontal";
     private const string VerticalInput = "Vertical";
 
@@ -54,6 +56,8 @@ public class ActionPhaseManager : MonoBehaviour
 
         //use default rotate of camera
         defaultRotateCamera = playerCamera.transform.rotation.eulerAngles;
+
+        countKilled = 0;
     }
 
     private void Update()
@@ -129,9 +133,14 @@ public class ActionPhaseManager : MonoBehaviour
     {
         inGameUIController.hpFill.value = val;
     }
+    public void UpdateMonsterKilled(int val = 1)
+    {
+        countKilled += val;
+        inGameUIController.UpdateMonsterKilled(countKilled);
+    }
 
     public void PauseGame(bool isPlayerDead = false)
     {
-        inGameUIController.ShowInGameUI(false, isPlayerDead);
+        inGameUIController.PauseGame(isPlayerDead);
     }
 }

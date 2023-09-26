@@ -26,7 +26,7 @@ public class CharAttribute : Attribute
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        // Debug.Log("OnTriggerEnter other : " + other.name);
+        Debug.Log("OnTriggerEnter other : " + other.name);
         if (other.tag == "Player" || other.tag == "Monster")
         {
             CharAttribute cA = other.GetComponent<CharAttribute>();
@@ -36,7 +36,7 @@ public class CharAttribute : Attribute
 
     public void WasHit(int attDmg)
     {
-        Debug.Log("this : " + this.name + " was hit " + attDmg);
+        Debug.Log("[GOWs] " + this.name + " was hit " + attDmg);
         curHealth -= (attDmg - curArmour);
         UpdateHPBar();
     }
