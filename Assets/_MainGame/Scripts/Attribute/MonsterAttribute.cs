@@ -34,6 +34,12 @@ public class MonsterAttribute : CharAttribute
     {
         ActionPhaseManager.GetInstance().UpdateMonsterKilled();
         monsterController.MonsterDead();
-        // this.gameObject.SetActive(false);
+    }
+
+    public void RebornMonster()
+    {
+        hpBar.value = 1.0f;
+        hpBar.gameObject.SetActive(false);
+        curHealth = health;
     }
 }

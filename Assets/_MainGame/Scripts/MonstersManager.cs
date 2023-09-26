@@ -8,14 +8,25 @@ public class MonstersManager : MonoBehaviour
     // [SerializeField] List<GameObject> spawnAreas;
     [SerializeField] float maxDistanceSpawn = 30.0f;
     [SerializeField] float minDistanceSpawn = 3.0f;
+    [HideInInspector] public List<GameObject> monstersDeadList;
 
     Timer cooldownPerSpawn;
+
+    private static MonstersManager _instance;
+
+    public static MonstersManager GetInstance()
+    {
+        return _instance;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         cooldownPerSpawn = new Timer();
         cooldownPerSpawn.SetDuration(mapLevelSO.cooldownPerSpawn);
+
+        monstersDeadList = new List<GameObject>();
+
         SpawnMonster();
     }
 
@@ -44,16 +55,33 @@ public class MonstersManager : MonoBehaviour
         Vector3 spawnPos = Vector3.zero;
         for (int i = 0; i < mapLevelSO.numbersMonsterPerSpawn; i++)
         {
-            int randomIndex = Random.Range(0, mapLevelSO.monsters.Count);
             spawnPos = new Vector3(Random.Range(minX, maxX), 0.0f, Random.Range(minZ, maxZ));
             if (Vector3.Distance(spawnPos, playerPos) < minDistanceSpawn)
             {
                 spawnPos += ((spawnPos - playerPos).normalized * minDistanceSpawn);
             }
-            GameObject monster = Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
+
+            if (monstersDeadList.Count > 0)
+            {
+                RebornDeadMonster(monstersDeadList[0], spawnPos);
+                monstersDeadList.RemoveAt(0);
+            }
+            else
+            {
+                int randomIndex = Random.Range(0, mapLevelSO.monsters.Count);
+                Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
+            }
         }
         ActionPhaseManager.GetInstance().UpdateTotalMonsterOnScreen(mapLevelSO.numbersMonsterPerSpawn);
         cooldownPerSpawn.Reset();
+    }
+
+    void RebornDeadMonster(GameObject monster, Vector3 pos)
+    {
+        monster.SetActive(true);
+        monster.transform.position = pos;
+        monster.GetComponent<MonsterController>().RebornMonster();
+        monster.GetComponent<MonsterAttribute>().RebornMonster();
     }
     // void SpawnMonster()
     // {

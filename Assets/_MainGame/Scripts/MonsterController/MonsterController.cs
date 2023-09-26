@@ -89,5 +89,12 @@ public class MonsterController : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         this.gameObject.SetActive(false);
+        MonstersManager.GetInstance().monstersDeadList.Add(this.gameObject);
+    }
+
+    public void RebornMonster()
+    {
+        colliderMonster.enabled = true;
+        monsterState = MonsterState.Idle;
     }
 }
