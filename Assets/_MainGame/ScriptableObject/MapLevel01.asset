@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcab1cd353f946745b06fea8f2f22d8a, type: 3}
+  m_Name: MapLevel01
+  m_EditorClassIdentifier: 
+  monsters:
+  - {fileID: 8926113138286593236, guid: f2865a47200afa14a8c94ce9edd40bf4, type: 3}
+  - {fileID: 7400149647427589386, guid: 5a81928cd85f9b4439328b052ff2fb62, type: 3}
+  cooldownPerSpawn: 1
+  numbersMonsterPerSpawn: 10
