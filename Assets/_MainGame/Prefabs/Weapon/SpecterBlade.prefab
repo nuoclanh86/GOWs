@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2148824818571994115}
-  - component: {fileID: 3395730701681543761}
   - component: {fileID: 4834769315831334907}
   m_Layer: 9
   m_Name: SpecterBlade
@@ -34,13 +33,61 @@ Transform:
   - {fileID: 7427238603951285207}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3395730701681543761
-BoxCollider:
+--- !u!114 &4834769315831334907
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176144986202707850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e08ae48a45dc0408d2e39906c68169, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributeSO: {fileID: 11400000, guid: a5638599e8397dd42a0d6bdea728ea4f, type: 2}
+  _childTrigger: {fileID: 7664422524175138317}
+  meshWeapon: {fileID: 7427238603951285207}
+--- !u!1 &2942557495098529687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8670211192636013807}
+  - component: {fileID: 27780267311162357}
+  - component: {fileID: 7664422524175138317}
+  m_Layer: 9
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8670211192636013807
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942557495098529687}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7427238603951285207}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &27780267311162357
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2942557495098529687}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -55,20 +102,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.4, y: 0.2, z: 2.2}
   m_Center: {x: 0, y: 0, z: 1.93}
---- !u!114 &4834769315831334907
+--- !u!114 &7664422524175138317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176144986202707850}
+  m_GameObject: {fileID: 2942557495098529687}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71e08ae48a45dc0408d2e39906c68169, type: 3}
+  m_Script: {fileID: 11500000, guid: f67f54e56cf377e418d0a9d981553000, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attributeSO: {fileID: 11400000, guid: a5638599e8397dd42a0d6bdea728ea4f, type: 2}
-  meshWeapon: {fileID: 7427238603951285207}
 --- !u!1001 &6503765422129704376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,7 +173,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 4238341205935625814, guid: 0b44bfa75a90414da2cbdcfef7854ec8, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 4418275436930780783, guid: 0b44bfa75a90414da2cbdcfef7854ec8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8670211192636013807}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b44bfa75a90414da2cbdcfef7854ec8, type: 3}
 --- !u!4 &7427238603951285207 stripped

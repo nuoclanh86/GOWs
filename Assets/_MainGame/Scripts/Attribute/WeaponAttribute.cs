@@ -19,7 +19,18 @@ public class WeaponAttribute : ItemAttribute
     float angleCount, mSpeedRotate, defaultSpeedRotate = 10.0f;
     Quaternion fromRotation = Quaternion.identity;
 
+    [SerializeField] GameObjectTrigger _childTrigger;
+
     [SerializeField] Transform meshWeapon;
+
+    void Awake()
+    {
+        this._childTrigger.OnTriggerColliderEnter += this.OnWeaponTriggerEnter;
+    }
+    void OnDestroy()
+    {
+        this._childTrigger.OnTriggerColliderEnter -= this.OnWeaponTriggerEnter;
+    }
 
     protected override void Start()
     {
@@ -85,6 +96,21 @@ public class WeaponAttribute : ItemAttribute
         {
             weaponState = WeaponState.Idle;
             meshWeapon.gameObject.SetActive(false);
+        }
+    }
+
+    protected override void OnTriggerEnter(Collider other)
+    {
+
+    }
+
+    public void OnWeaponTriggerEnter(GameObject thisWeapon, Collider other)
+    {
+        Debug.Log("OnWeaponTriggerEnter other : " + other.name + " by " + thisWeapon.name);
+        if (other.tag == "Monster")
+        {
+            CharAttribute cA = other.GetComponent<CharAttribute>();
+            cA.WasHit(this.damage);
         }
     }
 }
