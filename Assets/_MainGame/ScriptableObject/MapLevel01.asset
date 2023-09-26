@@ -16,4 +16,4 @@ MonoBehaviour:
   - {fileID: 8926113138286593236, guid: f2865a47200afa14a8c94ce9edd40bf4, type: 3}
   - {fileID: 7400149647427589386, guid: 5a81928cd85f9b4439328b052ff2fb62, type: 3}
   cooldownPerSpawn: 1
-  numbersMonsterPerSpawn: 10
+  numbersMonsterPerSpawn: 30
