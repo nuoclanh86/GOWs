@@ -24,6 +24,8 @@ public class MeeleMonsterController : MonsterController
             case MonsterState.UseSkill:
                 MovingToTarget(moveSpeed * speedChasing);
                 break;
+            case MonsterState.Die:
+                break;
             default:
                 break;
         }

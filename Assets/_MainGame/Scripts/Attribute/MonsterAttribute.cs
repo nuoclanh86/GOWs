@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MonsterAttribute : CharAttribute
 {
     Slider hpBar;
+    [SerializeField] MonsterController monsterController;
 
     protected override void Start()
     {
@@ -22,6 +23,7 @@ public class MonsterAttribute : CharAttribute
         if (curHealth <= 0)
         {
             curHealth = 0;
+            hpBar.gameObject.SetActive(false);
             TriggerCharacterDead();
             ActionPhaseManager.GetInstance().UpdateTotalMonsterOnScreen(-1);
         }
@@ -31,6 +33,7 @@ public class MonsterAttribute : CharAttribute
     protected override void TriggerCharacterDead()
     {
         ActionPhaseManager.GetInstance().UpdateMonsterKilled();
-        this.gameObject.SetActive(false);
+        monsterController.MonsterDead();
+        // this.gameObject.SetActive(false);
     }
 }

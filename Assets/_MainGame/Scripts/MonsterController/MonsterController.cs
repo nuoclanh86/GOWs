@@ -9,7 +9,8 @@ public class MonsterController : MonoBehaviour
         Idle,
         MovingToTarget,
         Hit,
-        UseSkill
+        UseSkill,
+        Die
     }
 
     protected enum MonsterAnim
@@ -25,6 +26,8 @@ public class MonsterController : MonoBehaviour
     GameObject mtarget = null;
     protected MonsterState monsterState;
     protected float moveSpeed;
+
+    [SerializeField] float disableMonsterDeadDelay = 2.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,8 @@ public class MonsterController : MonoBehaviour
             case MonsterState.Hit:
                 TriggerAnim((int)MonsterAnim.Hit);
                 break;
+            case MonsterState.Die:
+                break;
             case MonsterState.UseSkill:
                 break;
             default:
@@ -74,8 +79,20 @@ public class MonsterController : MonoBehaviour
         transform.position = Vector3.MoveTowards(transform.position, mtarget.transform.position, speed * Time.deltaTime);
         transform.rotation = Quaternion.LookRotation(mtarget.transform.position - transform.position);
     }
-    protected void TriggerAnim(int animIndex)
+    public void TriggerAnim(int animIndex)
     {
         animatorMonster.SetInteger("AnimIndex", animIndex);
+    }
+    public void MonsterDead()
+    {
+        monsterState = MonsterState.Die;
+        TriggerAnim((int)MonsterAnim.Die);
+        StartCoroutine(DisableMonsterDead(disableMonsterDeadDelay));
+    }
+
+    IEnumerator DisableMonsterDead(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        this.gameObject.SetActive(false);
     }
 }
