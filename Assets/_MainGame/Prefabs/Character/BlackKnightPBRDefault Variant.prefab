@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1802286859456520337, guid: 081006b40189456788e7910500338317, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: b694a55b42920f94088d62a7f13e6f37, type: 2}
     - target: {fileID: 1802286859466036053, guid: 081006b40189456788e7910500338317, type: 3}
       propertyPath: m_Name
       value: BlackKnightPBRDefault Variant
