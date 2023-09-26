@@ -38,6 +38,10 @@ public class LoadingScene : MonoBehaviour
     {
         LoadScene(MAPSCENE._Level01);
     }
+    public void LoadTestMapGame()
+    {
+        LoadScene(MAPSCENE._Level02);
+    }
 
     public void LoadNextGame()
     {

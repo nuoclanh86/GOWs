@@ -5,7 +5,7 @@ using UnityEngine;
 public class MonstersManager : MonoBehaviour
 {
     public MapLevelSO mapLevelSO;
-    [SerializeField] List<GameObject> spawnAreas;
+    // [SerializeField] List<GameObject> spawnAreas;
     [SerializeField] float maxDistanceSpawn = 30.0f;
     [SerializeField] float minDistanceSpawn = 3.0f;
 
