@@ -44,7 +44,9 @@ public class MonstersManager : MonoBehaviour
             Vector3 spawnPos = new Vector3(Random.Range(minX, maxX), 1.0f, Random.Range(minZ, maxZ));
             GameObject monster = Instantiate(mapLevelSO.monsters[randomIndex], spawnPos, Quaternion.identity);
             // monster.GetComponent<MonsterController>().MovingToTarget();
+
         }
+        ActionPhaseManager.GetInstance().UpdateTotalMonsterOnScreen(mapLevelSO.numbersMonsterPerSpawn);
         cooldownPerSpawn.Reset();
     }
 }

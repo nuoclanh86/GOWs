@@ -12,6 +12,8 @@ public class InGameUIController : MonoBehaviour
 
     public TextMeshProUGUI monsterKilled;
     const string monsterKilledText = "Killed : ";
+    public TextMeshProUGUI totalMonsterOnScreen;
+    const string totalMonsterOnScreenText = "MonsterOnScreen : ";
     public Slider hpFill;
 
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class InGameUIController : MonoBehaviour
     {
         ResumeGame();
         UpdateMonsterKilled(0);
+        UpdateTotalMonsterOnScreen(0);
         hpFill.value = 1.0f;
     }
 
@@ -30,6 +33,10 @@ public class InGameUIController : MonoBehaviour
     public void UpdateMonsterKilled(int val)
     {
         monsterKilled.text = monsterKilledText + val;
+    }
+    public void UpdateTotalMonsterOnScreen(long val)
+    {
+        totalMonsterOnScreen.text = totalMonsterOnScreenText + val;
     }
 
     // public void ShowInGameUI(bool isShowInGameUI, bool isPlayerDead = false)

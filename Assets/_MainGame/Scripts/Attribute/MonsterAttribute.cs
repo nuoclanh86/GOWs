@@ -23,6 +23,7 @@ public class MonsterAttribute : CharAttribute
         {
             curHealth = 0;
             TriggerCharacterDead();
+            ActionPhaseManager.GetInstance().UpdateTotalMonsterOnScreen(-1);
         }
         hpBar.value = (float)curHealth / health;
     }

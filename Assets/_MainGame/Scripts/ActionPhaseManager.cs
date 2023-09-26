@@ -15,6 +15,7 @@ public class ActionPhaseManager : MonoBehaviour
     PlayerController mainPlayerController;
 
     int countKilled = 0;
+    long totalMonsterOnScreen = 0;
 
     // private const string MouseXInput = "Mouse X";
     // private const string MouseYInput = "Mouse Y";
@@ -137,6 +138,11 @@ public class ActionPhaseManager : MonoBehaviour
     {
         countKilled += val;
         inGameUIController.UpdateMonsterKilled(countKilled);
+    }
+    public void UpdateTotalMonsterOnScreen(int val)
+    {
+        totalMonsterOnScreen += val;
+        inGameUIController.UpdateTotalMonsterOnScreen(totalMonsterOnScreen);
     }
 
     public void PauseGame(bool isPlayerDead = false)
