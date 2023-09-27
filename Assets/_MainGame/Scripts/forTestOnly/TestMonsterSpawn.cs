@@ -26,4 +26,10 @@ public class TestMonsterSpawn : MonoBehaviour
             }
         }
     }
+
+    private void Update()
+    {
+        if (Time.timeScale != 1)
+            Time.timeScale = 1;
+    }
 }
