@@ -8,5 +8,6 @@ public enum MAPSCENE : int
 {
     _MainMenu = 0,
     _Level01,
-    _Level02
+    _Level02,
+    _Level03
 }
