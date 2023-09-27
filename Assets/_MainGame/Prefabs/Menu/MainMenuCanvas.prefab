@@ -1000,9 +1000,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4818957664233884013, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_text
-      value: 'MapMany
+      value: '2500
 
-        Monster'
+        Monsters'
       objectReference: {fileID: 0}
     - target: {fileID: 4818957664233884013, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_fontSize
@@ -1011,6 +1011,14 @@ PrefabInstance:
     - target: {fileID: 4818957664233884013, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_fontSizeBase
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadTestMap03Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadingScene, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_Pivot.x
@@ -1078,7 +1086,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -384
+      value: -323.8
       objectReference: {fileID: 0}
     - target: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1127,6 +1135,14 @@ PrefabInstance:
     - target: {fileID: 4818957664233884013, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_fontSizeBase
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LoadTestMapGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadingScene, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_Pivot.x
