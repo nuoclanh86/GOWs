@@ -17,6 +17,8 @@ public class ActionPhaseManager : MonoBehaviour
     int countKilled = 0;
     long totalMonsterOnScreen = 0;
 
+    int mCheatHPForPlayer = 0;
+
     // private const string MouseXInput = "Mouse X";
     // private const string MouseYInput = "Mouse Y";
     // private const string MouseScrollInput = "Mouse ScrollWheel";
@@ -81,6 +83,12 @@ public class ActionPhaseManager : MonoBehaviour
         // }
 
         HandleCameraInput();
+        if (mCheatHPForPlayer > 0)
+        {
+            mainPlayer.GetComponent<CharAttribute>().AddAttributeHealth(mCheatHPForPlayer);
+            mainPlayer.GetComponent<CharAttribute>().RestoreHP(mCheatHPForPlayer);
+            mCheatHPForPlayer = 0;
+        }
     }
 
     private void HandleCameraInput()
@@ -153,5 +161,11 @@ public class ActionPhaseManager : MonoBehaviour
     public GameObject GetMainPlayer()
     {
         return mainPlayer;
+    }
+
+    public void CheatHPForPlayer(int cheatHPval)
+    {
+        Debug.Log("[GOWs] CheatHPForPlayer : " + cheatHPval);
+        mCheatHPForPlayer = cheatHPval;
     }
 }

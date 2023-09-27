@@ -27,6 +27,9 @@ public class MonstersManager : MonoBehaviour
         mMinDistanceSpawn = mapLevelSO.minDistanceSpawn;
         mMaxDistanceSpawn = mapLevelSO.maxDistanceSpawn;
 
+        if (mapLevelSO.cheatHPPlayer > 0)
+            ActionPhaseManager.GetInstance().CheatHPForPlayer(mapLevelSO.cheatHPPlayer);
+
         monstersSpawnedList = new List<GameObject>();
 
         SpawnMonster();

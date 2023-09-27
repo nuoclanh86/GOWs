@@ -25,3 +25,4 @@ MonoBehaviour:
   numbersMonsterPerSpawn: 100
   maxDistanceSpawn: 30
   minDistanceSpawn: 5
+  cheatHPPlayer: 5000
