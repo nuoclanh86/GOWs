@@ -25,6 +25,7 @@ public class LoadingScene : MonoBehaviour
     IEnumerator LoadSceneAsync(MAPSCENE scene)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(scene.ToString());
+        mainMenu.SetActive(false);
         loadingScene.SetActive(true);
         while (!operation.isDone)
         {
