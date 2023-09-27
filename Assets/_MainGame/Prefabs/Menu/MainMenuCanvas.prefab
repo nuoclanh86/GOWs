@@ -734,6 +734,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ExitGame
       objectReference: {fileID: 0}
+    - target: {fileID: 4818987305092741775, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: LoadingScene, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 7430935664726167480, guid: a12bfe2c1268ff54cb9aab0508fe35e5, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
